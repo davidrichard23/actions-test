@@ -17,4 +17,4 @@ runs:
   using: "composite"
   steps: 
     - run: ${{ inputs.file }}
-      shell: ${{ inputs.shell }}
+      shell: cmd
