@@ -1,4 +1,4 @@
-brew install python@3.8.5
+brew install python@3.8
 
 pip3 install pyinstaller
 pip3 install -U setuptools
