@@ -8,4 +8,18 @@ ls
 
 pyinstaller --onefile /Library/Python/3.8/site-packages/scar/scarcli.py
 
-ls
+echo "1"
+ls /Library
+
+echo "2"
+ls /Library/Python
+
+echo "3"
+ls /Library/3.8
+
+echo "4"
+ls /Library/3.8/site-packages
+
+
+echo "dist dir"
+ls dist
