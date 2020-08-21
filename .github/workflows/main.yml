@@ -40,7 +40,7 @@ jobs:
       uses: davidrichard23/actions-test@master
       with:
         os: 'windows'
-        file: 'windows-scar'
+        file: './windows-scar.ps1'
         shell: 'cmd'
     - name: Upload Windows Scar bin
       uses: actions/upload-artifact@v2
