@@ -6,6 +6,6 @@ pip3 install scar
 
 ls
 
-pyinstaller /Library/Python/3.8/site-packages/scar/scarcli.py
+pyinstaller --onefile /Library/Python/3.8/site-packages/scar/scarcli.py
 
 ls
