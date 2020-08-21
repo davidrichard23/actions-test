@@ -5,6 +5,9 @@ inputs:
     description: 'OS to generate scar bin for'
     required: true
     default: 'macos'
+  file:
+    description: 'file to run'
+    required: true
   os:
     description: 'shell to use'
     required: true
@@ -13,5 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps: 
-    - run: ${{ github.action_path }}/${{ inputs.os }}-scar.sh
+    - run: ${{ inputs.file }}
       shell: ${{ inputs.shell }}
