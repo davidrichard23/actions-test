@@ -6,19 +6,19 @@ pip3 install scar
 
 ls
 
-pyinstaller --onefile /Library/Python/3.8/site-packages/scar/scarcli.py
+pyinstaller --onefile ~/Library/Python/3.8/site-packages/scar/scarcli.py
 
 echo "1"
-ls /Library
+ls ~/Library
 
 echo "2"
-ls /Library/Python
+ls ~/Library/Python
 
 echo "3"
-ls /Library/3.8
+ls ~/Library/3.8
 
 echo "4"
-ls /Library/3.8/site-packages
+ls ~/Library/3.8/site-packages
 
 
 echo "dist dir"
