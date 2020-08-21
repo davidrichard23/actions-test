@@ -38,6 +38,7 @@ jobs:
       uses: davidrichard23/actions-test@master
       with:
         os: 'windows'
+        shell: 'cmd'
     - name: Upload Windows Scar bin
       uses: actions/upload-artifact@v2
       with:

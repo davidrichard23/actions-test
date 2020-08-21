@@ -5,12 +5,13 @@ inputs:
     description: 'OS to generate scar bin for'
     required: true
     default: 'macos'
+  os:
+    description: 'shell to use'
+    required: true
+    default: 'bash'
 
 runs:
   using: "composite"
   steps: 
     - run: ${{ github.action_path }}/${{ inputs.os }}-scar.sh
-      if: ${{inputs.os }} == 'windows'
-      shell: cmd
-      if: ${{inputs.os }} != 'windows'
-      shell: bash
+      shell: ${{ inputs.shell }}
