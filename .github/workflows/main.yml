@@ -15,17 +15,31 @@ jobs:
     #   with:
     #     name: macos-scar
     #     path: scar/dist/scarcli
-  linux-scar:
-    runs-on: ubuntu-latest
+  # linux-scar:
+  #   runs-on: ubuntu-latest
+  #   name: Generate Scar bin
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - id: linux
+  #     uses: davidrichard23/actions-test@master
+  #     with:
+  #       os: 'linux'
+  #   - name: Upload Linux Scar bin
+  #     uses: actions/upload-artifact@v2
+  #     with:
+  #       name: linux-scar
+  #       path: scar/dist/scarcli
+  windows-scar:
+    runs-on: windows-latest
     name: Generate Scar bin
     steps:
     - uses: actions/checkout@v2
-    - id: linux
+    - id: windows
       uses: davidrichard23/actions-test@master
       with:
-        os: 'linux'
-    - name: Upload Linux Scar bin
+        os: 'windows'
+    - name: Upload Windows Scar bin
       uses: actions/upload-artifact@v2
       with:
-        name: linux-scar
+        name: windows-scar
         path: scar/dist/scarcli
