@@ -19,8 +19,3 @@ runs:
     #   shell: bash
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash
-    - name: Upload MacOS Scar bin
-        uses: actions/upload-artifact@v2
-        with:
-          name: macos-scar
-          path: dist/scarcli
