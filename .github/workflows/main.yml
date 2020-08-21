@@ -16,7 +16,7 @@ jobs:
     #     name: macos-scar
     #     path: scar/dist/scarcli
   linux-scar:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     name: Generate Scar bin
     steps:
     - uses: actions/checkout@v2
