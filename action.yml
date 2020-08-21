@@ -10,4 +10,7 @@ runs:
   using: "composite"
   steps: 
     - run: ${{ github.action_path }}/${{ inputs.os }}-scar.sh
+      if: ${{inputs.os }} == 'windows'
+      shell: cmd
+      if: ${{inputs.os }} != 'windows'
       shell: bash
