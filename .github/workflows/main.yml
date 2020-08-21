@@ -1,11 +1,11 @@
 on: [push]
 
 jobs:
-  macos-scar:
-    runs-on: macos-latest
-    name: Generate Scar bin
-    steps:
-    - uses: actions/checkout@v2
+  # macos-scar:
+  #   runs-on: macos-latest
+  #   name: Generate Scar bin
+  #   steps:
+  #   - uses: actions/checkout@v2
     # - id: macos
     #   uses: davidrichard23/actions-test@master
     #   with:
@@ -15,6 +15,11 @@ jobs:
     #   with:
     #     name: macos-scar
     #     path: scar/dist/scarcli
+  linux-scar:
+    runs-on: linux-latest
+    name: Generate Scar bin
+    steps:
+    - uses: actions/checkout@v2
     - id: linux
       uses: davidrichard23/actions-test@master
       with:
