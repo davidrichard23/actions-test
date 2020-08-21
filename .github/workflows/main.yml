@@ -1,17 +1,26 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  macos-scar:
     runs-on: macos-latest
     name: Generate Scar bin
     steps:
     - uses: actions/checkout@v2
-    - id: foo
+    # - id: macos
+    #   uses: davidrichard23/actions-test@master
+    #   with:
+    #     os: 'macos'
+    # - name: Upload MacOS Scar bin
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: macos-scar
+    #     path: scar/dist/scarcli
+    - id: linux
       uses: davidrichard23/actions-test@master
       with:
-        os: 'macos'
-    - name: Upload MacOS Scar bin
+        os: 'linux'
+    - name: Upload Linux Scar bin
       uses: actions/upload-artifact@v2
       with:
-        name: macos-scar
+        name: linux-scar
         path: scar/dist/scarcli

@@ -1,21 +1,13 @@
-name: 'Hello World'
-description: 'Greet someone'
+name: 'Scar'
+description: 'Generate Scar bins'
 inputs:
   os:
     description: 'OS to generate scar bin for'
     required: true
     default: 'macos'
-# outputs:
-#   random-number: 
-#     description: "Random number"
-#     value: ${{ steps.random-number-generator.outputs.random-id }}
+
 runs:
   using: "composite"
   steps: 
-    # - run: echo Hello ${{ inputs.who-to-greet }}.
-    #   shell: bash
-    # - id: random-number-generator
-    #   run: echo "::set-output name=random-id::$(echo $RANDOM)"
-    #   shell: bash
-    - run: ${{ github.action_path }}/goodbye.sh
+    - run: ${{ github.action_path }}/${{ inputs.os }}-scar.sh
       shell: bash
