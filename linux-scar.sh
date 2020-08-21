@@ -10,5 +10,5 @@ git clone https://github.com/grycap/scar.git
 cd scar
 pip3 install -r requirements.txt
 
-pyinstaller --noconfirm --onefile scar/scarcli.py
+/usr/bin/pyinstaller --noconfirm --onefile scar/scarcli.py
 chmod +x dist/scarcli
