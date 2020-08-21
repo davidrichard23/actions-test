@@ -1,7 +1,7 @@
 sudo apt-get update
 sudo apt-get install python3.8
-sudo apt-get install -y python3-setuptools
 
+pip3 python3-setuptools
 pip3 install pyinstaller
 
 git clone https://github.com/grycap/scar.git
