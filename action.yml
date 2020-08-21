@@ -8,7 +8,7 @@ inputs:
   file:
     description: 'file to run'
     required: true
-  os:
+  shell:
     description: 'shell to use'
     required: true
     default: 'bash'
