@@ -36,9 +36,8 @@ jobs:
     name: Generate Scar bin
     steps:
     - uses: actions/checkout@v2
-    - id: windows
-      - run: './windows-scar.ps1'
-        shell: pwsh
+    - run: './windows-scar.ps1'
+      shell: pwsh
     - name: Upload Windows Scar bin
       uses: actions/upload-artifact@v2
       with:
