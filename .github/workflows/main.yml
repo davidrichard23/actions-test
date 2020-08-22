@@ -1,36 +1,30 @@
 on: [push]
 
 jobs:
-  # macos-scar:
-  #   runs-on: macos-latest
-  #   name: Generate Scar bin
-  #   steps:
-  #   - uses: actions/checkout@v2
-    # - id: macos
-    #   uses: davidrichard23/actions-test@master
-    #   with:
-    #     os: 'macos'
-    #     file: 'macos-scar.sh'
-    # - name: Upload MacOS Scar bin
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: macos-scar
-    #     path: scar/dist/scarcli
-  # linux-scar:
-  #   runs-on: ubuntu-latest
-  #   name: Generate Scar bin
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - id: linux
-  #     uses: davidrichard23/actions-test@master
-  #     with:
-  #       os: 'linux'
-  #       file: 'linux-scar.sh'
-  #   - name: Upload Linux Scar bin
-  #     uses: actions/upload-artifact@v2
-  #     with:
-  #       name: linux-scar
-  #       path: scar/dist/scarcli
+  macos-scar:
+    runs-on: macos-latest
+    name: Generate Scar bin
+    steps:
+    - uses: actions/checkout@v2
+    - run: 'macos-scar.sh'
+      shell: bash
+    - name: Upload MacOS Scar bin
+      uses: actions/upload-artifact@v2
+      with:
+        name: macos-scar
+        path: scar/dist/scarcli
+  linux-scar:
+    runs-on: ubuntu-latest
+    name: Generate Scar bin
+    steps:
+    - uses: actions/checkout@v2
+    - run: 'linux-scar.sh'
+      shell: bash
+    - name: Upload Linux Scar bin
+      uses: actions/upload-artifact@v2
+      with:
+        name: linux-scar
+        path: scar/dist/scarcli
   windows-scar:
     runs-on: windows-latest
     name: Generate Scar bin
