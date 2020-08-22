@@ -41,7 +41,6 @@ jobs:
       with:
         os: 'windows'
         file: './windows-scar.ps1'
-        shell: pwsh
     - name: Upload Windows Scar bin
       uses: actions/upload-artifact@v2
       with:

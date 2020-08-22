@@ -8,10 +8,6 @@ inputs:
   file:
     description: 'file to run'
     required: true
-  shell:
-    description: 'shell to use'
-    required: true
-    default: bash
 
 runs:
   using: "composite"
