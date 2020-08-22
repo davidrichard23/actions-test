@@ -6,7 +6,7 @@ jobs:
     name: Generate Scar bin
     steps:
     - uses: actions/checkout@v2
-    - run: 'macos-scar.sh'
+    - run: './macos-scar.sh'
       shell: bash
     - name: Upload MacOS Scar bin
       uses: actions/upload-artifact@v2
@@ -18,7 +18,7 @@ jobs:
     name: Generate Scar bin
     steps:
     - uses: actions/checkout@v2
-    - run: 'linux-scar.sh'
+    - run: './linux-scar.sh'
       shell: bash
     - name: Upload Linux Scar bin
       uses: actions/upload-artifact@v2
