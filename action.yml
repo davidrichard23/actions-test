@@ -11,10 +11,10 @@ inputs:
   shell:
     description: 'shell to use'
     required: true
-    default: 'bash'
+    default: bash
 
 runs:
   using: "composite"
   steps: 
     - run: ${{ inputs.file }}
-      shell: pwsh
+      shell: ${{ inputs.shell }}
