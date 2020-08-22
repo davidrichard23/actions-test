@@ -13,4 +13,4 @@ runs:
   using: "composite"
   steps: 
     - run: ${{ inputs.file }}
-    shell: default
+      shell: default
