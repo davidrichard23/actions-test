@@ -7,4 +7,5 @@ cd scar
 pip3 install -r requirements.txt
 
 pyinstaller --onefile scar/scarcli.py
-chmod +x dist/scarcli
+
+tar zcvf dist/scarcli.tar.gz dist/scarcli

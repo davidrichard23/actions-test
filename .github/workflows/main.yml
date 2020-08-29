@@ -11,8 +11,8 @@ jobs:
     - name: Upload MacOS Scar bin
       uses: actions/upload-artifact@v2
       with:
-        name: macos-scar
-        path: scar/dist/scarcli
+        name: macos-scar.tar.gz
+        path: scar/dist/scarcli.tar.gz
   linux-scar:
     runs-on: ubuntu-latest
     name: Generate Scar bin
@@ -23,8 +23,8 @@ jobs:
     - name: Upload Linux Scar bin
       uses: actions/upload-artifact@v2
       with:
-        name: linux-scar
-        path: scar/dist/scarcli
+        name: linux-scar.tar.gz
+        path: scar/dist/scarcli.tar.gz
   windows-scar:
     runs-on: windows-latest
     name: Generate Scar bin
