@@ -12,4 +12,4 @@ pip3 install -r requirements.txt
 
 $HOME/.local/bin/pyinstaller --noconfirm --onefile scar/scarcli.py
 
-tar zcvf dist/scarcli.tar.gz dist/scarcli
+tar zcvf dist/scarcli.tar.gz scarcli

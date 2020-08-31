@@ -3,7 +3,7 @@ on: [push]
 jobs:
   macos-scar:
     runs-on: macos-latest
-    name: Generate Scar bin
+    name: Generate macOS Scar bin
     steps:
     - uses: actions/checkout@v2
     - run: './macos-scar.sh'
@@ -13,27 +13,37 @@ jobs:
       with:
         name: macos-scar.tar.gz
         path: scar/dist/scarcli.tar.gz
-  linux-scar:
-    runs-on: ubuntu-latest
-    name: Generate Scar bin
-    steps:
-    - uses: actions/checkout@v2
-    - run: './linux-scar.sh'
-      shell: bash
-    - name: Upload Linux Scar bin
-      uses: actions/upload-artifact@v2
-      with:
-        name: linux-scar.tar.gz
-        path: scar/dist/scarcli.tar.gz
-  windows-scar:
-    runs-on: windows-latest
-    name: Generate Scar bin
-    steps:
-    - uses: actions/checkout@v2
-    - run: './windows-scar.ps1'
-      shell: pwsh
-    - name: Upload Windows Scar bin
-      uses: actions/upload-artifact@v2
-      with:
-        name: windows-scar
-        path: .\scar\dist\scarcli.exe
+    - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+  # linux-scar:
+  #   runs-on: ubuntu-latest
+  #   name: Generate Linux Scar bin
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - run: './linux-scar.sh'
+  #     shell: bash
+  #   - name: Upload Linux Scar bin
+  #     uses: actions/upload-artifact@v2
+  #     with:
+  #       name: linux-scar.tar.gz
+  #       path: scar/dist/scarcli.tar.gz
+  # windows-scar:
+  #   runs-on: windows-latest
+  #   name: Generate Windows Scar bin
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - run: './windows-scar.ps1'
+  #     shell: pwsh
+  #   - name: Upload Windows Scar bin
+  #     uses: actions/upload-artifact@v2
+  #     with:
+  #       name: windows-scar
+  #       path: .\scar\dist\scarcli.exe
